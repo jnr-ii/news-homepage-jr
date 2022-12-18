@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    line-height: 1.8;
+    color: hsl(236, 13%, 42%);
+}
+html {
+    font-size: 15px;
+}
+
+body {
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.topp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18.75px;
+}
+
+.topp nav #menu-close {
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    z-index: 999999;
+    cursor: pointer;
+}
+
+.topp nav {
+    opacity: 0;
+    z-index: -999;
+    transition: all 1s ease-in-out;
+}
+
+.topp nav.open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 75vw;
+    background-color: white;
+    padding: 19px;
+    opacity: 1;
+    z-index: 9999999999;
+}
+
+.topp nav ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.topp nav ul li {
+    margin: 23px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.topp nav ul li:hover {
+    color: hsl(5, 85%, 63%);
+}
+.topp .menu-btn button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.showcase {
+    padding: 18.75px;
+    padding-top: 0;
+}
+
+.showcase h1 {
+    font-size: 20px;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    margin-top: 15px 0;
+}
+
+.showcase div:first-child article p {
+    margin-bottom: 15px;
+}
+
+.showcase div:first-child article button {
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 650;
+    border: none;
+    outline: none;
+    margin-top: 90px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.6s ease-in-out;
+}
+
+.showcase div:first-child article button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+.showcase > div:last-child {
+    background-color: hsl(240, 100%, 5%);
+    margin-top: 30px;
+    padding: 19px 19px 0;
+}
+
+.showcase > div:last-child h2 {
+    color: hsl(35, 77%, 62%);
+}
+
+.showcase > div:last-child article {
+    padding: 30px 0;
+}
+.showcase > div:last-child article:not(:last-child) {
+    border-bottom: 2px solid hsl(236, 13%, 42%);
+    margin-top: 2px;
+}
+
+.showcase > div:last-child h3 {
+    color: hsl(36, 100%, 99%);
+    margin-bottom: 7.5px;
+}
+
+.showcase > div:last-child h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.tech {
+    padding: 19px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
+.tech article img {
+    width: 150px;
+}
+
+.tech article {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.tech article span {
+    color: hsl(236, 13%, 42%);
+    font-weight: bold;
+    font-size: 30px;
+    opacity: 50%;
+}
+
+.tech article h4 {
+    font-size: 19px;
+    column-rule-color: hsl(240, 100%, 5%);
+}
+
+.tech article h4:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .tech {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .topp {
+        padding: 30px 19px;
+    }
+
+    .topp nav {
+        opacity: 1;
+        z-index: auto;
+        width: 100%;
+    }
+
+    .topp nav.open {
+        position: relative;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        z-index: auto;
+    }
+
+    .topp nav #menu-close {
+        display: none;
+    }
+
+    .topp nav ul {
+        position: relative;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        transform: translateY(0%);
+    }
+
+    .topp nav ul li {
+        margin: 0;
+        display: inline;
+    }
+
+    .topp .menu-btn button {
+        display: none;
+    }
+    .showcase {
+        display: flex;
+        gap: 30px;
+    }
+
+    .showcase h1 {
+        font-size: 65px;
+    }
+
+    .showcase div:first-child article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        place-items: centre;
+        margin-top: 30px;
+    }
+
+    .showcase > div:last-child {
+        margin-top: 0;
+    }
+
+    .tech {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
